@@ -38,7 +38,7 @@ def extract_refiner_responses(survey_uuid, field_to_extract):
     if iterations > 1:
         for i in range(1, iterations):
             response = requests.get(
-                'https://api.refiner.io/v1/responses?api_key=' + API_KEY_RF + '&form_uuid=' + survey_uuid + "&page=" + i)
+                'https://api.refiner.io/v1/responses?api_key=' + API_KEY_RF + '&form_uuid=' + survey_uuid + "&page=" + str())
 
             data = response.json()
 
